@@ -51,23 +51,29 @@ public class Flights extends MainPage {
         buttonFrom.click();
         waitingToBeClickable(inputFrom);
         inputFrom.sendKeys(cityName);
+        waitingToBeClickable(originResult);
         originResult.click();
     }
     public void setDestination(String cityName){
         buttonGoingTo.click();
         waitingToBeClickable(inputGoingTo);
         inputGoingTo.sendKeys(cityName);
+        waitingToBeClickable(destinationResult);
         destinationResult.click();
     }
 
     public void setDepartingDate(String month, String date){
+        waitingToBeClickable(buttonDepartingDate);
         buttonDepartingDate.click();
+        waitingToBeClickable(datePicker(month, date));
         datePicker(month, date).click();
         buttonDone.click();
     }
     public void setReturningDate(String month, String date){
-        datePicker(month, date).click();
-        buttonDone.click();
+        //not applied
+//        buttonDepartingDate.click();
+//        datePicker(month, date).click();
+//        buttonDone.click();
     }
 
     public void clickSearch(){

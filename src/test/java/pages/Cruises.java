@@ -34,6 +34,7 @@ public class Cruises extends MainPage{
 
     public void setDeparts(String fields, String month, String date ){
         clickSafe(departs(fields));
+        waitingToBeClickable(datePicker(month, date));
         datePicker(month, date).click();
         buttonDone.click();
     }

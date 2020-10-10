@@ -22,13 +22,13 @@
      Then i see car search results contains "Airport Transportation"
 
    Scenario: Search Cruises
-       Given I open home page
-       When I click tab "Cruises"
-       And I select "Hawaii" from field Going to
-       And I set "November" "20" into field "Departs as early as"
-       And I set "December" "5" into field "Departs as late as"
-       And I click search cruises
-       Then i see cruises search results contains "Hawaii Cruise"
+     Given I open home page
+     When I click tab "Cruises"
+     And I select "Hawaii" from field Going to
+     And I set "November" "20" into field "Departs as early as"
+     And I set "December" "5" into field "Departs as late as"
+     And I click search cruises
+     Then i see cruises search results contains "Hawaii Cruise"
 
 
 

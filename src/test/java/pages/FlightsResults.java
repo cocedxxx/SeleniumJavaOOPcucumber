@@ -11,7 +11,7 @@ public class FlightsResults extends Flights {
     private WebElement results;
 
     public String searchResults() {
-        getWait().until(driver -> results.isDisplayed());
+        getWait(10).until(driver -> results.isDisplayed());
         return results.getText();
     }
 }
