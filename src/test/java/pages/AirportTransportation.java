@@ -51,23 +51,25 @@ public class AirportTransportation extends Cars{
         buttonAirport.click();
         waitingToBeClickable(inputAirport);
         inputAirport.sendKeys(cityName);
+        waitingToBeClickable(selectCarResult);
         selectCarResult.click();
     }
     public void setHotel(String hotelName){
         buttonHotel.click();
         waitingToBeClickable(inputHotel);
         inputHotel.sendKeys(hotelName);
+        waitingToBeClickable(selectHotResult);
         selectHotResult.click();
     }
 
     public void setArrivalDate(String month, String date){
         datePikerFlightArrivalDate.click();
+        waitingToBeClickable(datePicker(month,date));
         datePicker(month, date).click();
         buttonDone.click();
     }
 
     public void setTime(String time){
-//        selectTime.click();
         new Select(selectTime).selectByVisibleText(time);
     }
 }
